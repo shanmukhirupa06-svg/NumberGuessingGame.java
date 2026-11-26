@@ -1,84 +1,40 @@
-Number Guessing Game
+Number Guessing Game (Java)
 
+About the Project
 
-
-Project Description
-
-
-
-The Number Guessing Game is a simple Java application in which the computer selects a random number between 1 and 100. The player must guess the correct number within 7 attempts.
-
-
-
-Technologies Used
-
-
-
-\- Java 21
-
-\- Notepad
-
-\- Command Prompt
-
-
+This is a simple Number Guessing Game developed using Java. The computer generates a random number, and the player tries to guess it.
 
 Features
 
+- Generates a random number.
+- Accepts guesses from the user.
+- Displays hints if the guess is too high or too low.
+- Shows a success message when the correct number is guessed.
 
+Technologies Used
 
-1\. Random number generation.
-
-2\. Number guessing between 1 and 100.
-
-3\. Too High and Too Low hints.
-
-4\. Maximum 7 attempts.
-
-5\. Score tracking.
-
-6\. Play Again option.
-
-7\. Final score display.
-
-
+- Java
+- Scanner class
+- Random class
+- Loops and conditional statements
 
 How to Run
 
+1. Download or clone this repository.
+2. Open the project in any Java IDE or terminal.
+3. Compile the Java file.
+4. Run the program.
 
+Learning Outcomes
 
-1\. Open Command Prompt in the project folder.
+- Understanding random number generation.
+- Practising loops and conditional statements.
+- Learning user input handling in Java.
 
+Author
+Bezavada Shanmukhi Rupa
+Java Development Project
 
-
-2\. Compile the program:
-
-&#x20;  
-
-&#x20;  "javac NumberGuessingGame.java"
-
-
-
-3\. Run the program:
-
-&#x20;  
-
-&#x20;  "java NumberGuessingGame"
-
-
-
-Project Files
-
-
-
-\- NumberGuessingGame.java
-
-\- README.md
-
-
-
-Conclusion
-
-
-
-This project demonstrates basic Java programming concepts such as variables, loops, conditional statements, random number generation, and user input.
-
+Copyright
+Copyright © 2026 Bezavada Shanmukhi Rupa. All rights reserved.
+This project was created for learning and educational purposes. Please give credit to the original author if you use or modify this project.
