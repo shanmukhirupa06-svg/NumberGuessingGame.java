@@ -13,8 +13,13 @@ The game gives hints:
 
 ## Technologies Used
 - Java
-- Random class
-- Scanner class
+- Random Class
+- Scanner Class
+- While Loop
+- If-Else Statements
+- Variables
+- Conditional Statements
+- Basic Java Programming Concepts
 
 ## Conclusion
 This project demonstrates basic Java programming concepts.
