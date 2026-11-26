@@ -8,19 +8,24 @@ public class NumberGuessingGame {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
+        int round = 0;
         int score = 0;
-        String playAgain = "yes";
+        String playAgain;
 
-        System.out.println("Welcome to Number Guessing Game!");
+        do {
 
-        while (playAgain.equalsIgnoreCase("yes")) {
+            round++;
 
             int number = random.nextInt(100) + 1;
             int guess = 0;
             int attempts = 0;
             int maxAttempts = 7;
 
-            System.out.println("\nGuess a number between 1 and 100.");
+            boolean won = false;
+
+            System.out.println("\n===== NUMBER GUESSING GAME =====");
+            System.out.println("Round: " + round);
+            System.out.println("Guess a number between 1 and 100.");
             System.out.println("You have 7 attempts.");
 
             while (attempts < maxAttempts) {
@@ -28,6 +33,8 @@ public class NumberGuessingGame {
                 System.out.print("Enter your guess: ");
                 guess = sc.nextInt();
                 attempts++;
+
+                System.out.println("Attempts used: " + attempts);
 
                 if (guess > number) {
                     System.out.println("Too High!");
@@ -37,26 +44,30 @@ public class NumberGuessingGame {
                 }
                 else {
                     System.out.println("Correct! You won!");
-                    System.out.println("Attempts used: " + attempts);
-
-                    score = score + (maxAttempts - attempts + 1) * 10;
+                    won = true;
+                    score++;
                     break;
                 }
             }
 
-            if (guess != number) {
+            if (!won) {
                 System.out.println("You Lost!");
-                System.out.println("Correct number was: " + number);
+                System.out.println("The correct number was: " + number);
             }
 
-            System.out.println("Your score: " + score);
+            System.out.println("Round " + round +
+                    " — attempts used: " + attempts);
 
-            System.out.print("Do you want to play again? (yes/no): ");
+            System.out.println("Total rounds won: " + score);
+
+            System.out.print("Do you want to Play Again? (yes/no): ");
             playAgain = sc.next();
-        }
 
-        System.out.println("Final Score: " + score);
-        System.out.println("Thank you for playing!");
+        } while (playAgain.equalsIgnoreCase("yes"));
+
+        System.out.println("\n===== FINAL RESULT =====");
+        System.out.println("Total rounds played: " + round);
+        System.out.println("Total rounds won: " + score);
 
         sc.close();
     }
